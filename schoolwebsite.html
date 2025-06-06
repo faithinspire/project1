@@ -1,0 +1,926 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Sign Up | EduConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center py-8">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-2xl">
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">Student Registration</h1>
+                <p class="text-gray-600 mt-2">Join your school community</p>
+            </div>
+            
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Personal Info -->
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">First Name</label>
+                        <input type="text" placeholder="John" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Last Name</label>
+                        <input type="text" placeholder="Doe" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Grade Level</label>
+                        <select class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Select Grade</option>
+                            <option>Grade 9</option>
+                            <option>Grade 10</option>
+                            <option>Grade 11</option>
+                            <option>Grade 12</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Date of Birth</label>
+                        <input type="date" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <!-- Account Info -->
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">School Email</label>
+                        <input type="email" placeholder="john.doe@school.edu" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                        <input type="password" placeholder="********" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Confirm Password</label>
+                        <input type="password" placeholder="********" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">School Verification Code</label>
+                        <input type="text" placeholder="Enter code provided by school" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label class="block text-gray-700 text-sm font-bold mb-2">Profile Picture</label>
+                        <div class="flex items-center mt-1">
+                            <div class="h-12 w-12 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <button type="button" class="ml-4 bg-white border border-gray-300 rounded-lg px-3 py-1 text-sm">
+                                Upload Photo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Create Account
+                    </button>
+                </div>
+                
+                <div class="mt-6 text-center">
+                    <p class="text-gray-600">
+                        Already have an account? 
+                        <a href="student-login.html" class="text-blue-600 hover:underline">Sign in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | EduConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold text-gray-800">Student Login</h1>
+                <p class="text-gray-600 mt-2">Access your school community</p>
+            </div>
+            
+            <form>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        School Email
+                    </label>
+                    <input id="email" type="email" placeholder="yourname@school.edu" 
+                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input id="password" type="password" placeholder="********" 
+                           class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <input id="remember" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                        <label for="remember" class="ml-2 block text-sm text-gray-700">
+                            Remember me
+                        </label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-600 hover:underline">
+                        Forgot password?
+                    </a>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                    Sign In
+                </button>
+            </form>
+            
+            <div class="mt-6 text-center">
+                <p class="text-gray-600">
+                    Don't have an account? 
+                    <a href="student-signup.html" class="text-blue-600 hover:underline">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!-- Admin Dashboard -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | EduConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="w-64 bg-blue-800 text-white h-screen p-4">
+            <h1 class="text-2xl font-bold mb-8">Admin Dashboard</h1>
+            <ul class="space-y-2">
+                <li>
+                    <a href="admin-dashboard.html" class="flex items-center p-2 rounded hover:bg-blue-700">
+                        <i class="fas fa-tachometer-alt mr-3"></i> Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-users.html" class="flex items-center p-2 rounded hover:bg-blue-700">
+                        <i class="fas fa-users mr-3"></i> User Management
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-content.html" class="flex items-center p-2 rounded hover:bg-blue-700">
+                        <i class="fas fa-file-alt mr-3"></i> Content Moderation
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-reports.html" class="flex items-center p-2 rounded hover:bg-blue-700">
+                        <i class="fas fa-flag mr-3"></i> Reported Issues
+                    </a>
+                </li>
+                <li>
+                    <a href="admin-settings.html" class="flex items-center p-2 rounded hover:bg-blue-700">
+                        <i class="fas fa-cog mr-3"></i> System Settings
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 p-8">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-bold">User Management</h2>
+                <div class="relative w-64">
+                    <input type="text" placeholder="Search students..." 
+                           class="w-full p-2 pl-10 border rounded-lg">
+                    <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <table class="min-w-full">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Grade</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Active</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <div class="flex items-center">
+                                    <div class="flex-shrink-0 h-10 w-10">
+                                        <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="">
+                                    </div>
+                                    <div class="ml-4">
+                                        <div class="text-sm font-medium text-gray-900">Sarah Johnson</div>
+                                        <div class="text-sm text-gray-500">sjohnson@school.edu</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">10</td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2 hours ago</td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Active</span>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                <a href="#" class="text-blue-600 hover:text-blue-900 mr-4">View</a>
+                                <a href="#" class="text-yellow-600 hover:text-yellow-900 mr-4">Edit</a>
+                                <a href="#" class="text-red-600 hover:text-red-900">Deactivate</a>
+                            </td>
+                        </tr>
+                        <!-- More student rows... -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-sm font-medium text-gray-500">Total Students</h3>
+                    <p class="text-2xl font-bold">1,245</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-sm font-medium text-gray-500">Active Today</h3>
+                    <p class="text-2xl font-bold">342</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-sm font-medium text-gray-500">New This Week</h3>
+                    <p class="text-2xl font-bold">26</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow">
+                    <h3 class="text-sm font-medium text-gray-500">Flagged Content</h3>
+                    <p class="text-2xl font-bold">8</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduConnect - School Social Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for elements Tailwind can't easily handle */
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        .profile-pic {
+            transition: transform 0.3s ease;
+        }
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .online-dot {
+            width: 12px;
+            height: 12px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            border: 2px solid white;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        .dark-mode {
+            background-color: #1a202c;
+            color: #f7fafc;
+        }
+        .dark-mode .dark\:bg-gray-800 {
+            background-color: #2d3748;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Dark Mode Toggle -->
+    <div class="absolute top-4 right-4">
+        <button id="darkModeToggle" class="p-2 rounded-full bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-white">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="gradient-bg text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-graduation-cap text-2xl mr-2"></i>
+                        <span class="text-xl font-bold">EduConnect</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-4">
+                    <a href="#home" class="px-3 py-2 rounded-md text-sm font-medium bg-white bg-opacity-10">Home</a>
+                    <div class="relative group">
+                        <button class="px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                            Sign In
+                            <svg class="ml-1 h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
+                            <a href="student-login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Student</a>
+                            <a href="teacher-login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Teacher</a>
+                            <a href="parent-login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Parent</a>
+                            <a href="admin-login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Admin</a>
+                        </div>
+                    </div>
+                    <a href="#notifications" class="px-3 py-2 rounded-md text-sm font-medium relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
+                    </a>
+                    <div class="relative group">
+                        <button class="flex text-sm rounded-full focus:outline-none">
+                            <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/150" alt="Profile">
+                        </button>
+                        <div class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
+                            <a href="#profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Your Profile</a>
+                            <a href="#settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Settings</a>
+                            <a href="#help" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Help</a>
+                            <div class="border-t border-gray-200"></div>
+                            <a href="#signout" class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50">Sign out</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#student" class="block px-3 py-2 rounded-md text-base font-medium">Student Sign In</a>
+                <a href="#teacher" class="block px-3 py-2 rounded-md text-base font-medium">Teacher Sign In</a>
+                <a href="#parent" class="block px-3 py-2 rounded-md text-base font-medium">Parent Sign In</a>
+                <a href="#notifications" class="block px-3 py-2 rounded-md text-base font-medium relative">Notifications <span class="absolute right-5 top-2 h-2 w-2 rounded-full bg-red-500"></span></a>
+                <div class="pt-4 pb-3 border-t border-white border-opacity-20">
+                    <div class="flex items-center px-5">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="Profile">
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-base font-medium text-white">John Doe</div>
+                            <div class="text-sm font-medium text-blue-200">Student</div>
+                        </div>
+                    </div>
+                    <div class="mt-3 px-2 space-y-1">
+                        <a href="#profile" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">Your Profile</a>
+                        <a href="#settings" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">Settings</a>
+                        <a href="#help" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">Help</a>
+                        <a href="#signout" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-700">Sign out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Sign Up Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8 dark:bg-gray-800" id="signup">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 dark:text-white">Join EduConnect School Community</h2>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Personal Information</h3>
+                        
+                        <div>
+                            <label for="fname" class="block text-sm font-medium text-gray-700 dark:text-gray-300">First Name</label>
+                            <input type="text" id="fname" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        
+                        <div>
+                            <label for="lname" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Last Name</label>
+                            <input type="text" id="lname" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        
+                        <div>
+                            <label for="role" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Role</label>
+                            <select id="role" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                                <option>Select your role</option>
+                                <option>Student</option>
+                                <option>Teacher</option>
+                                <option>Parent</option>
+                            </select>
+                        </div>
+                        
+                        <div id="student-fields">
+                            <label for="grade" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Class/Grade Level</label>
+                            <select id="grade" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                                <option>Select your grade</option>
+                                <option>Grade 1</option>
+                                <option>Grade 2</option>
+                                <option>Grade 3</option>
+                                <option>Grade 4</option>
+                                <option>Grade 5</option>
+                                <option>Grade 6</option>
+                                <option>Grade 7</option>
+                                <option>Grade 8</option>
+                                <option>Grade 9</option>
+                                <option>Grade 10</option>
+                                <option>Grade 11</option>
+                                <option>Grade 12</option>
+                            </select>
+                        </div>
+                        
+                        <div id="teacher-fields" class="hidden">
+                            <label for="department" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Department/Subject Area</label>
+                            <input type="text" id="department" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Account Information</h3>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email Address</label>
+                            <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
+                            <input type="password" id="password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        
+                        <div>
+                            <label for="confirm-password" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Confirm Password</label>
+                            <input type="password" id="confirm-password" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                        </div>
+                        
+                        <div>
+                            <label for="school-code" class="block text-sm font-medium text-gray-700 dark:text-gray-300">School Verification Code</label>
+                            <input type="text" id="school-code" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600">
+                            <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">This helps us verify you belong to our school community.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Profile Picture</h3>
+                    <div class="mt-2 flex items-center">
+                        <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100 dark:bg-gray-600">
+                            <svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                            </svg>
+                        </span>
+                        <button type="button" class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            Change
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-300">Hobbies & Interests</h3>
+                    <textarea id="hobbies" rows="3" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600" placeholder="Sports, music, reading, etc."></textarea>
+                </div>
+                
+                <div class="mt-8 border-t border-gray-200 pt-5">
+                    <div class="flex justify-end">
+                        <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                            Cancel
+                        </button>
+                        <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white gradient-bg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Create Account
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Features Showcase -->
+        <div class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 dark:text-white">Connect, Learn, and Grow Together</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover dark:bg-gray-800">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">Collaborative Groups</h3>
+                        <p class="text-gray-500 dark:text-gray-300">
+                            Join class-specific groups to collaborate on projects, share resources, and discuss topics with classmates and teachers.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover dark:bg-gray-800">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-green-500 text-white mb-4">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">AI Learning Assistant</h3>
+                        <p class="text-gray-500 dark:text-gray-300">
+                            Get instant homework help, study material recommendations, and explanations for complex topics from our AI assistant.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover dark:bg-gray-800">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-purple-500 text-white mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-2">Safe Environment</h3>
+                        <p class="text-gray-500 dark:text-gray-300">
+                            A monitored platform with content filtering and privacy controls to ensure a safe learning environment for everyone.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Online Users Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8 dark:bg-gray-800">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 dark:text-white">Recently Online</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- User 1 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-2">
+                        <img src="https://via.placeholder.com/150" class="h-16 w-16 rounded-full profile-pic" alt="Sarah Johnson">
+                        <span class="online-dot"></span>
+                    </div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-white">Sarah Johnson</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-300">Grade 10</p>
+                </div>
+                
+                <!-- User 2 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-2">
+                        <img src="https://via.placeholder.com/150" class="h-16 w-16 rounded-full profile-pic" alt="Michael Chen">
+                        <span class="online-dot"></span>
+                    </div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-white">Michael Chen</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-300">Grade 11</p>
+                </div>
+                
+                <!-- User 3 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-2">
+                        <img src="https://via.placeholder.com/150" class="h-16 w-16 rounded-full profile-pic" alt="Mr. Thompson">
+                    </div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-white">Mr. Thompson</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-300">Physics Teacher</p>
+                </div>
+                
+                <!-- User 4 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-2">
+                        <img src="https://via.placeholder.com/150" class="h-16 w-16 rounded-full profile-pic" alt="Mrs. Rodriguez">
+                        <span class="online-dot"></span>
+                    </div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-white">Mrs. Rodriguez</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-300">Math Teacher</p>
+                </div>
+                
+                <!-- User 5 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-2">
+                        <img src="https://via.placeholder.com/150" class="h-16 w-16 rounded-full profile-pic" alt="David Wilson">
+                    </div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-white">David Wilson</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-300">Grade 9</p>
+                </div>
+                
+                <!-- User 6 -->
+                <div class="text-center">
+                    <div class="relative inline-block mb-2">
+                        <img src="https://via.placeholder.com/150" class="h-16 w-16 rounded-full profile-pic" alt="Mrs. Patel">
+                    </div>
+                    <p class="text-sm font-medium text-gray-700 dark:text-white">Mrs. Patel</p>
+                    <p class="text-xs text-gray-500 dark:text-gray-300">Parent</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Feed Preview -->
+        <div class="bg-white rounded-lg shadow-md p-6 mb-8 dark:bg-gray-800">
+            <h2 class="text-xl font-bold text-gray-800 mb-4 dark:text-white">Recent Activity</h2>
+            
+            <!-- Post 1 -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <div class="flex items-start">
+                    <div class="relative flex-shrink-0 mr-4">
+                        <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="Mr. Thompson">
+                        <span class="online-dot"></span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-900 dark:text-white">Mr. Thompson</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-300">Physics Teacher • 2 hours ago</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-600 dark:text-gray-200">
+                                Don't forget about the lab report due Friday! I've attached the rubric and some helpful resources to guide you. Also, I'll be available for extra help Thursday after school in room 204.
+                            </p>
+                        </div>
+                        <div class="mt-4 flex space-x-4">
+                            <div class="flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                <i class="far fa-thumbs-up mr-1"></i>
+                                <span>42</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                <i class="far fa-comment mr-1"></i>
+                                <span>12 comments</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                <i class="fas fa-share-alt mr-1"></i>
+                                <span>Share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 ml-14 flex-wrap flex">
+                    <div class="border rounded p-2 text-xs bg-gray-50 m-1 dark:bg-gray-700 dark:border-gray-600">
+                        <i class="fas fa-file-pdf text-red-500 mr-1"></i> Lab_Report_Rubric.pdf
+                    </div>
+                    <div class="border rounded p-2 text-xs bg-gray-50 m-1 dark:bg-gray-700 dark:border-gray-600">
+                        <i class="fas fa-link text-blue-500 mr-1"></i> Physics Lab Examples
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Post 2 -->
+            <div class="border-b border-gray-200 pb-6 mb-6">
+                <div class="flex items-start">
+                    <div class="relative flex-shrink-0 mr-4">
+                        <img class="h-10 w-10 rounded-full" src="https://via.placeholder.com/150" alt="Sarah Johnson">
+                        <span class="online-dot"></span>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm font-medium text-gray-900 dark:text-white">Sarah Johnson</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-300">Grade 10 • Yesterday</p>
+                            </div>
+                            <button class="text-gray-400 hover:text-gray-500">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                        <div class="mt-2">
+                            <p class="text-sm text-gray-600 dark:text-gray-200">
+                                Does anyone want to start a study group for the history test next week? I'm thinking we could meet Monday after school in the library. Comment below if interested!
+                            </p>
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <img class="h-4 w-4 rounded-full mr-1" src="https://via.placeholder.com/150" alt="">
+                                <img class="h-4 w-4 rounded-full mr-1" src="https://via.placeholder.com/150" alt="">
+                                <span>Michael and 5 others like this</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <div class="flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                    <i class="far fa-thumbs-up mr-1"></i>
+                                    <span>Like</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                    <i class="far fa-comment mr-1"></i>
+                                    <span>Comment</span>
+                                </div>
+                                <div class="flex items-center text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 cursor-pointer">
+                                    <i class="fas fa-share-alt mr-1"></i>
+                                    <span>Share</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4 ml-14">
+                    <div class="flex items-start">
+                        <div class="relative flex-shrink-0 mr-3">
+                            <img class="h-8 w-8 rounded-full" src="https://via.placeholder.com/150" alt="Michael Chen">
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-3 dark:bg-gray-700">
+                            <div class="flex items-center justify-between">
+                                <p class="text-sm font-medium text-gray-700 dark:text-white">Michael Chen</p>
+                                <span class="text-xs text-gray-500 dark:text-gray-300">4h ago</span>
+                            </div>
+                            <p class="text-sm text-gray-600 mt-1 dark:text-gray-200">I'm in! I'll bring some notes on the Revolutionary War. You studying the Civil War too?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Demo -->
+        <div class="bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg shadow-md p-6 mb-8 dark:from-blue-900 dark:to-purple-900">
+            <div class="flex items-center mb-4">
+                <div class="bg-blue-500 p-3 rounded-full mr-3">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                <h2 class="text-xl font-bold text-gray-800 dark:text-white">AI Learning Assistant</h2>
+            </div>
+            <div class="bg-white rounded-lg shadow p-4 mb-4 dark:bg-gray-800">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-2 rounded-full mr-3 dark:bg-blue-700">
+                        <i class="fas fa-user text-blue-600 dark:text-blue-200"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm text-gray-600 dark:text-gray-200">Explain the Pythagorean theorem like I'm a 5th grader.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-50 rounded-lg shadow p-4 dark:bg-gray-700">
+                <div class="flex items-start">
+                    <div class="bg-blue-500 p-2 rounded-full mr-3">
+                        <i class="fas fa-robot text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-sm text-gray-700 dark:text-gray-200">
+                            Imagine you're building a fence, and you want to make sure the corners are perfect right angles. The Pythagorean theorem helps with that! It says that in a right triangle (one with a 90° corner), if you make squares on each side, the area of the square on the longest side (hypotenuse) equals the sum of the areas of the other two squares. In math terms: a² + b² = c².
+                        </p>
+                        <div class="mt-2 flex">
+                            <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded mr-2 dark:bg-blue-600 dark:text-blue-100">Thumbs Up</button>
+                            <button class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded dark:bg-blue-600 dark:text-blue-100">Thumbs Down</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4">
+                <div class="relative">
+                    <input type="text" placeholder="Ask the AI assistant anything..." class="w-full p-3 border border-gray-300 rounded-lg pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:border-gray-600">
+                    <div class="absolute left-3 top-3">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                    <button class="absolute right-2 top-2 bg-blue-500 text-white p-1 rounded-md hover:bg-blue-600">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <p class="text-xs text-gray-500 mt-2 dark:text-gray-300">Try: "Help me understand photosynthesis" or "Explain World War II causes simply"</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-4">About</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-100 hover:text-white">Our School</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Safety Guidelines</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-100 hover:text-white">Homework Help</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Study Guides</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Scholarships</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">College Prep</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-4">Connect</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-100 hover:text-white">Contact Teachers</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Student Council</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Clubs</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Sports Teams</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold tracking-wider uppercase mb-4">Get Help</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-blue-100 hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Tech Support</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Report a Problem</a></li>
+                        <li><a href="#" class="text-blue-100 hover:text-white">Suggestions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-blue-400">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="flex space-x-6 mb-4 md:mb-0">
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    <p class="text-sm text-blue-100">
+                        © 2023 EduConnect School Platform. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Role selection visibility
+        const roleSelect = document.getElementById('role');
+        const studentFields = document.getElementById('student-fields');
+        const teacherFields = document.getElementById('teacher-fields');
+        
+        roleSelect.addEventListener('change', (e) => {
+            if (e.target.value === 'Student') {
+                studentFields.classList.remove('hidden');
+                teacherFields.classList.add('hidden');
+            } else if (e.target.value === 'Teacher') {
+                studentFields.classList.add('hidden');
+                teacherFields.classList.remove('hidden');
+            } else {
+                studentFields.classList.add('hidden');
+                teacherFields.classList.add('hidden');
+            }
+        });
+        
+        // Dark mode toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const icon = darkModeToggle.querySelector('i');
+        
+        darkModeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            
+            if (icon.classList.contains('fa-moon')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+            
+            // Toggle dark mode classes on elements that need it
+            document.querySelectorAll('.dark\\:bg-gray-800').forEach(el => {
+                el.classList.toggle('dark:bg-gray-800');
+            });
+            
+            document.querySelectorAll('.dark\\:text-white').forEach(el => {
+                el.classList.toggle('dark:text-white');
+            });
+        });
+    </script>
+</body>
+</html>
